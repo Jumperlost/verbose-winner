@@ -1,0 +1,271 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Concert One", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 20px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  position: relative;
+  display: flex;
+  padding: 40px 90px;
+  justify-content: center;
+}
+.logo-name {
+  margin: 0 200px 0 100px;
+}
+
+.logo-name-mod {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: #b0e0fb;
+  position: relative;
+  transform: rotate(225deg);
+  text-align: center;
+  line-height: 80px;
+}
+.logo-name-mod::before {
+  content: "Logo";
+  height: 80px;
+  width: 80px;
+  background: #b0e0fb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(135deg);
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+p {
+  padding: 10px 0;
+  letter-spacing: 1.5px;
+}
+
+.tabs-text {
+  display: none;
+  overflow: hidden;
+  background-color: #d9b7e1;
+  padding: 50px;
+}
+.tabs-list li.active {
+  background: #d9b7e1;
+  border-right: none;
+}
+
+.tabs-text.active {
+  display: block;
+}
+
+li {
+  position: relative;
+  float: none;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  background: #b0e0fb;
+}
+li:not(.active) {
+  cursor: pointer;
+}
+
+.main-block-tabs {
+  max-width: 89%;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: #d9b7e1;
+}
+
+.tabs-list {
+  float: left;
+  display: block;
+  padding-bottom: 28%;
+  background: #b0e0fb;
+}
+
+#animate-square {
+  position: absolute;
+  bottom: -35px;
+  right: 45px;
+  padding: 25px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #b0e0fb;
+  border-top: 10px solid pink;
+  border-right: 10px solid lightsalmon;
+  border-bottom: 10px solid lightgreen;
+  border-left: 10px solid lightblue;
+}
+
+.rotate360 {
+  transition: transform 1.5s;
+  transform: rotate(360deg);
+}
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 15px;
+  }
+  li {
+    width: 50%;
+    position: relative;
+    float: none;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: #b0e0fb;
+  }
+  .tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 0;
+  }
+  #animate-square {
+    display: none;
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .header {
+    padding: 5px;
+  }
+
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  .logo-name-mod {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #b0e0fb;
+    position: relative;
+    transform: rotate(225deg);
+    text-align: center;
+    line-height: 40px;
+  }
+  .logo-name-mod::before {
+    content: "Logo";
+    height: 40px;
+    width: 40px;
+    background: #b0e0fb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 15px;
+  }
+  li {
+    width: 50%;
+    position: relative;
+    float: none;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: #b0e0fb;
+  }
+  .tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 0;
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .header {
+    padding: 5px;
+  }
+  .logo-name-mod {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #b0e0fb;
+    position: relative;
+    transform: rotate(225deg);
+    text-align: center;
+    line-height: 40px;
+  }
+  .logo-name-mod::before {
+    content: "Logo";
+    height: 40px;
+    width: 40px;
+    background: #b0e0fb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 15px;
+  }
+  .header {
+    padding: 10px 30px;
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    bottom: -35px;
+    right: 10px;
+  }
+  .tabs-list {
+    padding-bottom: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header {
+    padding: 10px 30px;
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    bottom: -35px;
+    right: 25px;
+  }
+  .tabs-list {
+    padding-bottom: 70%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+  .tabs-list {
+    padding-bottom: 40%;
+  }
+}
